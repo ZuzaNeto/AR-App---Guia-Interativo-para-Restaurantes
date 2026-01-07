@@ -41,9 +41,9 @@ Um desafio técnico significativo foi a integração do feed da câmera com o UR
 
 ### Instruções
 
-1. Baixe o arquivo **.apk** disponível na seção [Releases] deste repositório.
+1. Baixe o arquivo **.apk** (disponível na na pasta `/Builds`) deste repositório.
 2. Instale no seu dispositivo móvel.
-3. Abra o arquivo `Menu.pdf` (disponível na pasta `/Assets/Documentos`) em uma tela ou imprima-o.
+3. Abra o arquivo `Menu.pdf` (disponível na pasta `/Documentos`) em uma tela ou imprima-o.
 4. Inicie o aplicativo e aponte para as fotos dos pratos. Aguarde alguns segundos para que o rastreador identifique os pontos de contraste e projete o modelo 3D.
 
 
