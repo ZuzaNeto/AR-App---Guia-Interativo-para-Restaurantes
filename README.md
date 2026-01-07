@@ -40,7 +40,7 @@ Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o
 
 ### Instruções para Download:
 
-1. Acesse a aba [Releases](https://www.google.com/search?q=LINK_DA_SUA_RELEASE_AQUI) deste repositório.
+1. Acesse a aba [Releases](https://github.com/ZuzaNeto/AR-App---Guia-Interativo-para-Restaurantes/releases/tag/v1.0) deste repositório.
 2. Baixe o arquivo **.apk**.
 3. Instale no seu dispositivo Android (conceda as permissões de "Instalar de Fontes Desconhecidas", se necessário).
 
