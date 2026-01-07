@@ -68,7 +68,3 @@ Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o
 **Disciplina:** Computação Gráfica
 
 **Docente:** Haroldo Gomes Barroso Filho
-
-### Próximo passo sugerido:
-
-Agora que você tem o README pronto, gostaria que eu te ajudasse a escrever o roteiro de 2 minutos para a sua apresentação sorteada, focando em como você resolveu os desafios técnicos do Unity 6?
