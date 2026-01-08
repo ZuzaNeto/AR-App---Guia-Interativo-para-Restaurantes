@@ -19,18 +19,29 @@ A aplicação utiliza o rastreamento de imagem (Image Tracking) para instanciar 
 
 ## 🏗️ Arquitetura e Implementação (Registro de Software - P2)
 
-### 1. Gerenciamento Dinâmico de Ativos
+### 1. Gerenciamento de Ativos (Script `Cardapio.cs`)
 
-A aplicação utiliza um script controlador (`Cardapio.cs`) que gerencia a detecção de imagens em tempo real.
+A lógica principal reside na classe `MultiImageTrackingManager`, que coordena a detecção de imagens e o ciclo de vida dos objetos 3D.
 
-* **Mapeamento por Nome:** O sistema realiza o "match" entre o nome da imagem detectada na `ReferenceImageLibrary` e o nome dos `Prefabs` na pasta de Assets.
-* **Escalabilidade:** Esta abordagem permite gerenciar múltiplos objetos (8 itens) com um único script, otimizando o consumo de memória e o tempo de processamento.
+* **Estrutura de Dados do Prefab:**
+A aplicação utiliza um dicionário interno para rastrear instâncias ativas, garantindo que cada prato seja instanciado apenas uma vez.
+```json
+{
+  "dados_objeto_ra": {
+    "identificador": "nome_da_imagem_library",
+    "transform_vinculado": "trackedImage.transform",
+    "status_rastreio": "TrackingState.Tracking",
+    "objetos_disponiveis": 8
+  }
+}
 
-### 2. Solução do Conflito de Renderização no Unity 6
+```
 
-Para habilitar o feed da câmera no Android sob o Universal Render Pipeline (URP), foi necessária a configuração do arquivo `Mobile_Renderer` (Universal Renderer Data).
 
-* **Implementação:** Foi adicionada a **AR Background Renderer Feature**, corrigindo a falha de renderização (tela amarela) e permitindo a sobreposição correta dos modelos 3D no mundo real.
+* **Método Principal `OnTrackedImagesChanged`:** Este método é o "coração" da aplicação. Ele monitora a biblioteca de imagens e executa as seguintes funções:
+1. **Detecção (`eventArgs.added`):** Compara o nome da imagem detectada com a lista de prefabs disponíveis.
+2. **Instanciação:** Cria o objeto 3D como filho da imagem rastreada se ele ainda não existir na cena.
+3. **Atualização (`eventArgs.updated`):** Ativa ou desativa a visibilidade do modelo 3D conforme a câmera mantém ou perde o foco no papel.
 
 ---
 
@@ -61,6 +72,23 @@ Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o
 
 ---
 
+## 👥 Créditos
+
+*Alunos:* José Nunes de Sousa Neto e Jamilly Vitoria Ferreira Barbosa
+*Disciplina:* EECP0014 - Computação Gráfica
+*Professor:* Haroldo Gomes Barroso Filho
+*Instituição:* UFMA — Universidade Federal do Maranhão  
+*Semestre:* 2025.2
+
+---
+
+<div align="center">
+
+*Desenvolvido para fins acadêmicos*
+
+</div>
+
+---
 **Desenvolvido por:** José Nunes de Sousa Neto, Jamilly Vitoria Ferreira Barbosa
 
 **Data:** Janeiro de 2026
