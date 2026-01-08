@@ -65,6 +65,12 @@ Para facilitar a avaliação e o teste público da plataforma, disponibilizamos 
 * **🎥 Desenvolvimento do App:** [Assista aqui como o app foi desenvolvido](https://www.google.com/search?q=LINK_DO_YOUTUBE_DESENVOLVIMENTO_AQUI) — *Explicação técnica sobre a integração do Unity 6 com AR Foundation.*
 * **🎥 Instalação e Demonstração:** [Passo a passo de instalação e demonstração](https://www.google.com/search?q=LINK_DO_YOUTUBE_DEMONSTRACAO_AQUI) — *Guia visual de como instalar o APK e utilizar o cardápio interativo.*
 
+#### **Requisitos de Sistema**
+
+* **Compatibilidade:** O dispositivo Android deve ser obrigatoriamente compatível com o **ARCore**.
+* **Lista de Dispositivos:** Você pode verificar se o seu aparelho suporta a tecnologia na lista oficial do Google: [Dispositivos compatíveis com ARCore](https://developers.google.com/ar/devices?hl=pt-br).
+* **Software:** É necessário ter o *Google Play Services para RA* instalado e atualizado via Play Store.
+
 Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o limite de upload direto do repositório. O download deve ser feito via **GitHub Releases**.
 
 ### Instruções para Download:
