@@ -17,14 +17,13 @@ A aplicação utiliza o rastreamento de imagem (Image Tracking) para instanciar 
 
 ---
 
-## 🏗️ Arquitetura e Implementação (Registro de Software - P2)
+## 🏗️ Arquitetura e Implementação (Registro de Software)
 
 ### 1. Gerenciamento de Ativos (Script `Cardapio.cs`)
 
-A lógica principal reside na classe `MultiImageTrackingManager`, que coordena a detecção de imagens e o ciclo de vida dos objetos 3D.
+*Estrutura de dados detalhada:*
+A aplicação utiliza um dicionário interno para rastrear instâncias ativas, garantindo que cada prato seja instanciado apenas uma vez ao ser detectado pela primeira vez.
 
-* **Estrutura de Dados do Prefab:**
-A aplicação utiliza um dicionário interno para rastrear instâncias ativas, garantindo que cada prato seja instanciado apenas uma vez.
 ```json
 {
   "dados_objeto_ra": {
@@ -37,15 +36,34 @@ A aplicação utiliza um dicionário interno para rastrear instâncias ativas, g
 
 ```
 
+*Método de Instanciação Dinâmica:*
+Este trecho do código é responsável por realizar o "match" entre o nome da imagem na biblioteca e o Prefab correspondente, ignorando diferenças entre maiúsculas e minúsculas.
 
-* **Método Principal `OnTrackedImagesChanged`:** Este método é o "coração" da aplicação. Ele monitora a biblioteca de imagens e executa as seguintes funções:
-1. **Detecção (`eventArgs.added`):** Compara o nome da imagem detectada com a lista de prefabs disponíveis.
-2. **Instanciação:** Cria o objeto 3D como filho da imagem rastreada se ele ainda não existir na cena.
-3. **Atualização (`eventArgs.updated`):** Ativa ou desativa a visibilidade do modelo 3D conforme a câmera mantém ou perde o foco no papel.
+```csharp
+// Quando uma imagem nova é detectada
+foreach (var trackedImage in eventArgs.added)
+{
+    var imageName = trackedImage.referenceImage.name;
+    foreach (var prefab in arPrefabs)
+    {
+        if (string.Compare(prefab.name, imageName, System.StringComparison.OrdinalIgnoreCase) == 0 && !_instantiatedPrefabs.ContainsKey(imageName))
+        {
+            var newPrefab = Instantiate(prefab, trackedImage.transform);
+            _instantiatedPrefabs.Add(imageName, newPrefab);
+        }
+    }
+}
+
+```
 
 ---
 
-## 📦 Instalação e Testes Públicos (P3)
+### 📦 Instalação e Demonstração
+
+Para facilitar a avaliação e o teste público da plataforma, disponibilizamos materiais em vídeo detalhando todo o processo:
+
+* **🎥 Desenvolvimento do App:** [Assista aqui como o app foi desenvolvido](https://www.google.com/search?q=LINK_DO_YOUTUBE_DESENVOLVIMENTO_AQUI) — *Explicação técnica sobre a integração do Unity 6 com AR Foundation.*
+* **🎥 Instalação e Demonstração:** [Passo a passo de instalação e demonstração](https://www.google.com/search?q=LINK_DO_YOUTUBE_DEMONSTRACAO_AQUI) — *Guia visual de como instalar o APK e utilizar o cardápio interativo.*
 
 Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o limite de upload direto do repositório. O download deve ser feito via **GitHub Releases**.
 
@@ -74,10 +92,14 @@ Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o
 
 ## 👥 Créditos
 
-*Alunos:* José Nunes de Sousa Neto e Jamilly Vitoria Ferreira Barbosa
+*Alunos:* José Nunes de Sousa Neto, Jamilly Vitoria Ferreira Barbosa
+
 *Disciplina:* EECP0014 - Computação Gráfica
+
 *Professor:* Haroldo Gomes Barroso Filho
+
 *Instituição:* UFMA — Universidade Federal do Maranhão  
+
 *Semestre:* 2025.2
 
 ---
@@ -89,10 +111,3 @@ Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o
 </div>
 
 ---
-**Desenvolvido por:** José Nunes de Sousa Neto, Jamilly Vitoria Ferreira Barbosa
-
-**Data:** Janeiro de 2026
-
-**Disciplina:** Computação Gráfica
-
-**Docente:** Haroldo Gomes Barroso Filho
