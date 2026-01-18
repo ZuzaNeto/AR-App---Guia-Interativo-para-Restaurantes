@@ -15,7 +15,7 @@ O código-fonte completo, bem como os assets utilizados no projeto, estão dispo
 
 Para facilitar a avaliação e o teste público da plataforma, disponibilizamos materiais em vídeo detalhando todo o processo:
 
-* **🎥 Desenvolvimento do App:** [Assista aqui como o app foi desenvolvido](https://www.google.com/search?q=LINK_DO_YOUTUBE_DESENVOLVIMENTO_AQUI) — *Explicação técnica sobre a integração do Unity 6 com AR Foundation.*
+* **🎥 Desenvolvimento do App:** [Assista aqui como o app foi desenvolvido](https://youtu.be/MTEbV2OHmqo?si=V27nOUgaYnDIfFIY) — *Explicação técnica sobre a integração do Unity 6 com AR Foundation.*
 * **🎥 Instalação e Demonstração:** [Passo a passo de instalação e demonstração](https://youtu.be/MDLIjgQ5cGI?si=bXqDWH7MC4P9Rpbe) — *Guia visual de como instalar o APK e utilizar o cardápio interativo.*
 
 #### **Requisitos de Sistema**
