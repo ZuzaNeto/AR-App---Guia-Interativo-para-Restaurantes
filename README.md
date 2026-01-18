@@ -8,6 +8,36 @@ A aplicação utiliza o rastreamento de imagem (Image Tracking) para instanciar 
 
 ---
 
+### 📦 Instalação e Demonstração
+
+Para facilitar a avaliação e o teste público da plataforma, disponibilizamos materiais em vídeo detalhando todo o processo:
+
+* **🎥 Desenvolvimento do App:** [Assista aqui como o app foi desenvolvido](https://www.google.com/search?q=LINK_DO_YOUTUBE_DESENVOLVIMENTO_AQUI) — *Explicação técnica sobre a integração do Unity 6 com AR Foundation.*
+* **🎥 Instalação e Demonstração:** [Passo a passo de instalação e demonstração](https://youtu.be/MDLIjgQ5cGI?si=bXqDWH7MC4P9Rpbe) — *Guia visual de como instalar o APK e utilizar o cardápio interativo.*
+
+#### **Requisitos de Sistema**
+
+* **Compatibilidade:** O dispositivo Android deve ser obrigatoriamente compatível com o **ARCore**.
+* **Lista de Dispositivos:** Você pode verificar se o seu aparelho suporta a tecnologia na lista oficial do Google: [Dispositivos compatíveis com ARCore](https://developers.google.com/ar/devices?hl=pt-br).
+* **Software:** É necessário ter o *Google Play Services para RA* instalado e atualizado via Play Store.
+
+Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o limite de upload direto do repositório. O download deve ser feito via **GitHub Releases**.
+
+### Instruções para Download:
+
+1. Acesse a aba [Releases](https://github.com/ZuzaNeto/AR-App---Guia-Interativo-para-Restaurantes/releases/tag/v1.0) deste repositório.
+2. Baixe o arquivo **.apk**.
+3. Instale no seu dispositivo Android (conceda as permissões de "Instalar de Fontes Desconhecidas", se necessário).
+
+### Como Testar:
+
+1. Abra o aplicativo no celular.
+2. Conceda permissão de uso da **Câmera**.
+3. Aponte para as imagens contidas no arquivo `Menu.pdf` (localizado na pasta `/Documentos` deste repositório).
+4. Mantenha o foco por alguns segundos para que a RA projete o prato escolhido sobre a mesa.
+
+---
+
 ## 🛠️ Especificações Técnicas
 
 * **Engine:** Unity 6 (6000.0.64f1).
@@ -55,36 +85,6 @@ foreach (var trackedImage in eventArgs.added)
 }
 
 ```
-
----
-
-### 📦 Instalação e Demonstração
-
-Para facilitar a avaliação e o teste público da plataforma, disponibilizamos materiais em vídeo detalhando todo o processo:
-
-* **🎥 Desenvolvimento do App:** [Assista aqui como o app foi desenvolvido](https://www.google.com/search?q=LINK_DO_YOUTUBE_DESENVOLVIMENTO_AQUI) — *Explicação técnica sobre a integração do Unity 6 com AR Foundation.*
-* **🎥 Instalação e Demonstração:** [Passo a passo de instalação e demonstração](https://youtu.be/MDLIjgQ5cGI?si=bXqDWH7MC4P9Rpbe) — *Guia visual de como instalar o APK e utilizar o cardápio interativo.*
-
-#### **Requisitos de Sistema**
-
-* **Compatibilidade:** O dispositivo Android deve ser obrigatoriamente compatível com o **ARCore**.
-* **Lista de Dispositivos:** Você pode verificar se o seu aparelho suporta a tecnologia na lista oficial do Google: [Dispositivos compatíveis com ARCore](https://developers.google.com/ar/devices?hl=pt-br).
-* **Software:** É necessário ter o *Google Play Services para RA* instalado e atualizado via Play Store.
-
-Devido ao tamanho dos modelos 3D de alta fidelidade, o executável ultrapassou o limite de upload direto do repositório. O download deve ser feito via **GitHub Releases**.
-
-### Instruções para Download:
-
-1. Acesse a aba [Releases](https://github.com/ZuzaNeto/AR-App---Guia-Interativo-para-Restaurantes/releases/tag/v1.0) deste repositório.
-2. Baixe o arquivo **.apk**.
-3. Instale no seu dispositivo Android (conceda as permissões de "Instalar de Fontes Desconhecidas", se necessário).
-
-### Como Testar:
-
-1. Abra o aplicativo no celular.
-2. Conceda permissão de uso da **Câmera**.
-3. Aponte para as imagens contidas no arquivo `Menu.pdf` (localizado na pasta `/Documentos` deste repositório).
-4. Mantenha o foco por alguns segundos para que a RA projete o prato escolhido sobre a mesa.
 
 ---
 
