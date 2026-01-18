@@ -94,7 +94,7 @@ foreach (var trackedImage in eventArgs.added)
 ## 📂 Organização das Pastas
 
 * `/Assets`: Código-fonte, prefabs e materiais dos 8 objetos.
-* `/Documentos`: Cardápio em PDF para teste do rastreamento.
+* `/Documentos`: Cardápio em PDF para teste do rastreamento e Material de Apresentação em PDF.
 * `/ProjectSettings`: Configurações globais de RA e Pipeline de Renderização.
 
 ---
