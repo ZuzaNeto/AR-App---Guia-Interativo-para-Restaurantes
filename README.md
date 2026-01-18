@@ -4,7 +4,10 @@
 
 Este projeto é uma aplicação móvel desenvolvida para a disciplina de **Computação Gráfica**. O objetivo é transformar a experiência de escolha em um restaurante, permitindo que o usuário visualize modelos 3D realistas dos pratos ao apontar a câmera do celular para as imagens do cardápio físico.
 
-A aplicação utiliza o rastreamento de imagem (Image Tracking) para instanciar dinamicamente 8 objetos diferentes: **Pão de Forma, Croissant, Focaccia, Donut Tradicional, Donut de Chocolate, Donut Specialty, Café Espresso e Pizza Rústica**.
+A aplicação utiliza **Realidade Aumentada com rastreamento de imagem (Image Tracking)** para instanciar dinamicamente 8 objetos diferentes: **Pão de Forma, Croissant, Focaccia, Donut Tradicional, Donut de Chocolate, Donut Specialty, Café Espresso e Pizza Rústica**.
+
+O código-fonte completo, bem como os assets utilizados no projeto, estão disponíveis neste repositório:  
+🔗 https://github.com/ZuzaNeto/AR-App---Guia-Interativo-para-Restaurantes/tree/main
 
 ---
 
