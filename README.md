@@ -1,4 +1,4 @@
-# MenuVision - Guia Interativo para Restaurantes em Realidade Aumentada (RA)
+# Menu Vision - Guia Interativo para Restaurantes em Realidade Aumentada (RA)
 
 ## 📌 Descrição do Projeto
 
